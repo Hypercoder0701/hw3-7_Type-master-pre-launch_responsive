@@ -1,0 +1,225 @@
+@use "../utils/variables";
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: variables.$primary-font;
+}
+
+.button {
+  padding: 16px 27px;
+  font-weight: 700;
+  line-height: 162.5%;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 55px 165px 39px 165px;
+  max-width: 1440px;
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    .header__logo-and-btn {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__button {
+        color: variables.$primary-color;
+        background: #e8eff2;
+      }
+      &__button:hover {
+        color: white;
+        background: #162542;
+      }
+    }
+
+    .header__main {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 80px;
+      gap: 125px;
+
+      &__description {
+        margin-top: 60px;
+
+        span {
+          color: variables.$primary-color;
+          font-size: 56px;
+          font-weight: 900;
+          line-height: 100%;
+          text-transform: uppercase;
+        }
+        p {
+          margin-top: 24px;
+          color: variables.$secondary-color;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 144.444%;
+        }
+
+        &__buttons {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 40px;
+
+          &__btn {
+            color: white;
+            background: #f16718;
+          }
+          &__btn:hover {
+            background: #ff9b62;
+          }
+          span {
+            margin: 0;
+            color: #7b8bad;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 162.5%;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+
+    &__visuals {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 125px;
+
+      &__images {
+        display: flex;
+        gap: 32px;
+
+        img {
+          border-radius: 20px;
+        }
+        div {
+          border-radius: 20px;
+          background: #f16718;
+
+          img {
+            mix-blend-mode: multiply;
+          }
+        }
+      }
+
+      &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        justify-content: center;
+
+        span {
+          color: #162542;
+          font-size: 32px;
+          font-weight: 900;
+          line-height: 112.5%;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #7b8bad;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 162.5%;
+        }
+      }
+    }
+
+    &__tools {
+      margin-top: 168px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+
+      &__tool {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          width: 64px;
+          margin-bottom: 48px;
+        }
+        span {
+          color: #162542;
+          font-size: 24px;
+          font-weight: 900;
+          line-height: 116.667%;
+          text-transform: uppercase;
+          margin-bottom: 24px;
+        }
+        p {
+          color: #7b8bad;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 162.5%;
+        }
+      }
+    }
+  }
+}
+.end {
+  margin-top: 128px;
+  color: #7b8bad;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 162.5%;
+  padding-bottom: 39px;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    padding: 0;
+    padding-top: 40px;
+    padding-left: 39px;
+  }
+  header {
+    .header__main {
+      gap: 70px;
+
+      &__description {
+        span {
+          font-size: 48px;
+        }
+      }
+
+    }
+  }
+}
